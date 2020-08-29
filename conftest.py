@@ -1,5 +1,4 @@
 import pytest
-import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
@@ -20,6 +19,5 @@ def browser(request):
     browser = webdriver.Chrome(options=options)
     yield browser
     # Время чтбы визуально проверить, что фраза на кнопке добавления в корзину на необходимом языке
-    time.sleep(15)
     print("\nquit browser..")
     browser.quit()
