@@ -2,8 +2,12 @@ from selenium.webdriver.common.by import By
 
 
 class LoginPageLocators():
-    LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")           # форма авторизации
-    REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")     # форма регистрации
+    LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")               # форма авторизации
+    REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")         # форма регистрации
+    REGISTER_EMAIL = (By.ID, "id_registration-email")           # поле ввода email
+    REGISTER_PASSWORD1 = (By.ID, "id_registration-password1")   # поле ввода пароля
+    REGISTER_PASSWORD2 = (By.ID, "id_registration-password2")   # поле для повторного ввода пароля
+    REGISTER_SUBMIT = (By.NAME, "registration_submit")          # кнопка Зарегистрироваться
 
 
 class ProductPageLocators():
@@ -16,9 +20,10 @@ class ProductPageLocators():
 
 
 class BasePageLocators():
-    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")                   # ссылка на ссылку логин
-    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")       # не существующая ссылка на ссылку логин
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")                   # ссылка на логин
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")       # не существующая ссылка на логин
     BASKET_LINK = (By.CSS_SELECTOR, ".basket-mini a.btn-default")   # ссылка на Перейти в корзину
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")                     # иконка пользователя
 
 
 class BasketPageLocators():
